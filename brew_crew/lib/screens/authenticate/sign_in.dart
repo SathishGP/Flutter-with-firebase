@@ -48,7 +48,7 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: 20.0),
               TextFormField(
                 decoration: textInputDecoration.copyWith(hintText: 'email'),
-                validator: (val) => val.isEmpty ? 'Enter an email' : null,
+                validator: (val) => val.isEmpty ? 'Enter an email address' : null,
                 onChanged: (val) {
                   setState(() => email = val);
                 },
@@ -76,7 +76,7 @@ class _SignInState extends State<SignIn> {
                     if(result == null) {
                       setState(() {
                         loading = false;
-                        error = 'Could not sign in with those credentials';
+                        error = 'Please check login credentials';
                       });
                     }
                   }
